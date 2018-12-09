@@ -1,0 +1,22 @@
+{% extends "main.html" %}
+{% block content %}
+    <form action="/signup" method="post">
+        <label for="">
+            Username:<input type="text" name="username" value="{{username}}">
+        </label>
+        <div style="color: #f00">{{invalid_username}}</div>
+        <label for="">
+            Password:<input type="password" name="password"><div style="color: #f00">
+        </label>
+        {{invalid_password}}</div>
+        <label for="">
+            Re-enter password:<input type="password" name="verify"><div style="color: #f00">
+        </label>
+        {{invalid_verify}}</div>
+        <label for="">
+            Email:<input type="email" name="email" value="{{email}}">
+        </label>
+        <div style="color: #f00">{{invalid_email}}</div>
+        <input type="submit" value="signup">
+    </form>
+{% endblock %}
